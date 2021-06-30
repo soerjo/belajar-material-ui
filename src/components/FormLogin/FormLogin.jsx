@@ -11,7 +11,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   paper: {
     textAlign: "center",
     padding: "2rem 1rem",
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "1.5rem 0",
     padding: ".8rem",
   },
-}));
+});
 
 function FormLogin({ isLoading, loginAction }) {
   const classes = useStyles();
