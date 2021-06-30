@@ -16,16 +16,21 @@ const authReducer = (state = initState, action) => {
         isLoading: action.payload,
       };
     }
-    case "LOGIN_FIREBASE":
+    case "LOGIN_FIREBASE": {
       return {
         ...state,
-        isLogin: action.payload,
+        user: action.payload,
       };
-    case "REGIST_FIREBASE":
+    }
+    case "lOGOUT_FIREBASE": {
       return {
         ...state,
-        isregist: action.payload,
+        user: {
+          email: "",
+          password: "",
+        },
       };
+    }
     default:
       return state;
   }
